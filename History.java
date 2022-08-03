@@ -1,6 +1,7 @@
 import java.util.Scanner;
  
  public class History{
+    // Capitulo 1
     public static void main (String[] args) throws Exception
     {
     // string nome de personagem
@@ -117,4 +118,57 @@ import java.util.Scanner;
     leer.close();
     nome.close();
    }
+   // Capitulo 2
+   public static void mian (String[] args) throws Exception{
+    String comeco ="Apos o dia estressante de ontem a manhã começa similar," 
+    +  "mas com mais baulhos do lado de fora do quarto, mas um barulho é ouvido da janela, é o seu melhor amigo \n";
+
+    System.out.println(comeco + "Diga o nome do visitante:\n ");
+ 
+    Scanner amigo = new Scanner(System.in);
+    String friend = amigo.next();
+
+    int willpower = 3;
+
+    
+    System.out.println(friend + " o chama para sair de casa, mas não pode quando o pai tá estressado assim,"
+    + "então pede pra ele ajudar a sair, diz que na loja por perto tem uma corda grande se pegar dá para amarrar "
+    + " e descer; Se recusa ou vai pegar?\n");
+    int will2;
+    Scanner rumo1 = new Scanner(System.in);
+    System.out.printf("Responda 1 para a 1° resposta e 2 para a 2°: \n");
+    will2 = rumo1.nextInt();
+
+      
+       if (will2 == 1) {
+        System.out.println(" Se recusa, ele parece bem triste, decidem ficar jogando conversa fora até o fim do dia.");
+      willpower = willpower -1;
+      } else {
+        System.out.println("  Pega emprestado da loja uma corda bem firme, ao amarrar com os lençois do quarto"
+        + "e conseguem descer, ficam se divertindo a tarde inteira até voltar pra dentro da casa.");
+        willpower = willpower +1;
+      }
+    
+    System.out.println("\n Após um tempo juntos, quando estavam se despedindo , a noite chega e muitos barulhos são ouvidos de dentro da casa"
+    + " e passos chegam perto do quarto,manda ele se esconder ou faz barulho para chamar atenção de quem chegou?");
+    int will3;
+    Scanner rumo2 = new Scanner(System.in);
+    System.out.printf("Responda 1 para a 1° resposta e 2 para a 2°: \n");
+    will3 = rumo2.nextInt();
+
+   if (will3 == 1) {
+    System.out.println("Diz para se esconder, ainda escuta alguns gritos mas parece que não ouve conflito");
+    willpower = willpower-1;
+   } else {
+    System.out.println("O pai, acaba gritando do lado de dentro da casa apesar da sua comoção"
+    +"parece que ele acabou mais estressado que antes.");
+    willpower = willpower -2;
+   }
+    
+    //close dos scanners
+    amigo.close();
+    rumo1.close();
+    rumo2.close();
+   }
+   
  }
